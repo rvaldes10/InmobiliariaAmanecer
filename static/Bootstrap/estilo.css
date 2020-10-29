@@ -1,0 +1,431 @@
+body{
+
+    margin: 0px;
+
+}
+
+/*Menú Superior*/
+
+    .navbarLogo{
+
+        background: rgb(15, 15, 15);
+            
+    }
+
+    .navbarMaster{
+
+        background: rgb(15, 15, 15);
+        overflow: hidden;
+
+    }
+
+
+    .navbar-fixed{
+
+        background: rgb(15, 15, 15);
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        width: 100%;
+        box-shadow: 0px 4px 3px rgba(0,0,0,.5);
+        -webkit-transition: all ease .5s;
+        -o-transition: all ease .5s;
+        transition: all ease .5s;
+
+    }
+
+    .logo img{
+
+        display: block;
+        margin: auto;
+        padding-bottom: 15px;
+        padding-top: 10px;
+
+    }
+
+    .OptNavBar{
+
+        text-align: center;
+        padding: 20px;
+
+    }
+
+    .OptNavBar a{
+
+        color: ivory;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-decoration: none;
+        padding: 0.5em 1.2em;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: rgb(15, 15, 15);
+        border: 2px solid;
+        border-color: rgb(15, 15, 15);
+        position: relative;
+
+    }
+
+
+    .OptNavBar a:hover{
+
+        color: rgba(255, 255, 255, 1);
+        box-shadow: 0 4px 16px ivory;
+        transition: all 0.2s ease;
+        text-decoration: none;
+
+    }
+
+    .InfoPiloto{
+
+        background-color: rgb(20, 20, 20);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        color: ivory;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+    }
+
+/*Termino Menú Superior*/
+
+/*Footer*/
+
+    .footer{
+
+        background: rgb(15, 15, 15);
+        padding-top: 25px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+
+    }
+
+    .InfoFooter{
+
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: ivory;
+        text-align: center;
+
+    }
+
+/*Termino Footer*/
+
+/*Body Paginas*/
+
+    .TextoHeader{
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: ivory;
+        text-align: center;
+
+    }
+
+    .CaracteristicasImagen{
+
+        background-image: url(Imgs/Inicio/Caracteristicas-2.png);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .TextoCaracteristicas ul{
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        padding-top: 5px;
+
+    }
+
+    .TextoCaracteristicas h1{
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+
+    }
+
+
+    .TituloGaleria{
+
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: gray;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 40px;
+
+    }
+
+    .Galeria{
+
+        width: 100%;
+        position: relative;
+        height: 750px;
+        padding-bottom: 45px;
+
+    }
+
+    .Galeria img {
+
+        width: 98%;
+        height: 100%;
+        display: block;
+        margin: auto;
+
+    }
+
+    .botonesGaleria{
+
+        font-size: 30px;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,.7);
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(255,255,255,.6);
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+
+    }
+
+    .botonesGaleria:hover{
+
+        cursor: pointer;
+        transform: scale(1.2,1.2);
+
+    }
+
+    .retroceder{
+
+        left: 2%;
+        top: calc(50% - 70px);
+
+    }
+
+    .avanzar{
+
+        right: 2%;
+        top: calc(50% - 70px);
+
+    }
+
+    .TituloPlantas{
+
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: gray;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 40px;
+
+    }
+
+    .Plantas{
+
+        display: flex;
+        padding: 10px;
+
+    }
+
+
+    .col-lg-4 img{
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    .MasterPlan img{
+
+        width: 100%;
+        height: auto;
+
+    }
+
+/*Termino Body Paginas*/
+
+/*Inicio Formulario*/
+
+    .formulario__label{
+
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .formulario__grupo-input{
+
+        position: relative;
+
+    }
+
+    .formulario__input{
+
+        width: 100%;
+        background: transparent;
+        border: 3px solid rgba(0,0,0,.7);
+        border-radius: 3px;
+        height: 45px;
+        line-height: 45px;
+        padding: 0px 40px 0px 10px;
+        transition: .3s ease all;
+
+    }
+
+    .formulario__input:focus{
+
+        border: 3px solid ivory;
+        outline: none;
+
+    }
+
+    .formulario__input-error{
+
+        font-size: 12px;
+        margin-bottom: 0;
+        display: none;
+
+    }
+
+    .formulario__input-error-activo{
+
+        display: block;
+
+    }
+
+    .formulario__validacion-estado{
+
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0;
+
+    }
+
+    .formulario__mensaje{
+
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        background: #F66060;
+        padding: 0px 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        display: none;
+
+    }
+
+    .formulario__mensaje-activo {
+
+        display: block;
+
+    }
+
+    .formulario__mensaje p{
+
+        margin: 0;
+
+    }
+
+    .formulario__grupo-btn-enviar{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+
+    }
+
+    .formulario__grupo-btn-enviar button{
+
+        margin-bottom: 10px;
+
+    }
+
+    .formulario__btn{
+
+        height: 45px;
+        line-height: 45px;
+        width: 30%;
+        background: goldenrod;
+        color: ivory;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: .1s ease all;
+
+    }
+
+    .formulario__btn:hover{
+
+        box-shadow: 3px 0px 30px rgba(163,163,163,1);
+
+    }
+
+    .formulario__mensaje-exito{
+
+        font-size: 14px;
+        color: #119200;
+        display: none;
+
+    }
+
+    .formulario__mensaje-exito-activo{
+
+        display: block;
+
+    }
+
+    /*------------- Estilos para Validacion -------------*/
+
+    .formulario__grupo-correcto .formulario__validacion-estado{
+
+        color: #1ed12d;
+        opacity: 1;
+
+    }
+
+    .formulario__grupo-incorrecto .formulario__label{
+
+        color: #bb2929;
+
+    }
+
+    .formulario__grupo-incorrecto .formulario__validacion-estado{
+
+        color: #bb2929;
+        opacity: 1;
+
+    }
+
+    .formulario__grupo-incorrecto .formulario__input{
+
+        border: 3px solid #bb2929;
+
+    }
+
+/*Termino Formulario*/
+
+/*Galeria Responsiva*/
+
+@media (max-width: 1000px){
+
+    .Galeria{
+
+        width: 90%;
+        position: relative;
+        height: 500px;
+        margin: auto;
+
+    }
+
+}
