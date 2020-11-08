@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.Home),
     path('registro/', views.Registro),
-    path('masterplan/', views.MasterPlan)
+    path('masterplan/', views.MasterPlan),
+    #path('cotizacionclientes/',views.clientes)
     
 ]

@@ -1,12 +1,11 @@
-from django.http import HttpResponse
-from django.template import Template, context, loader
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render,get_object_or_404
+from django.template import Template, context, loader, RequestContext
 
-def Home(request):
+#def Home(request):
     
-    home = loader.get_template('index.html')
-    pagina = home.render()
-
-    return HttpResponse(pagina)
+    #home = Home.objects.all()
+    #return render('index.html', {'home':home}, context_instance=RequestContext(request))
 
 def Registro(request):
     
