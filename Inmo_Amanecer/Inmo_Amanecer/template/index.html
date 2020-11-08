@@ -36,7 +36,7 @@
 
         <div class="logo">
 
-            <img src="Imgs/Inicio/logoinmob.png" alt="logoinmob">
+            <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
 
         </div>
 
@@ -48,9 +48,9 @@
 
         <div class="OptNavBar">
 
-            <a href="index.html">INICIO</a>
-            <a href="registro.html">REGISTRO</a>
-            <a href="masterplan.html">MASTER PLAN</a>
+            <a href="/index">INICIO</a>
+            <a href="/registro">REGISTRO</a>
+            <a href="/masterplan">MASTER PLAN</a>
 
         </div>
 
@@ -87,7 +87,7 @@
 
                 <div class="TextoHeader">
 
-                    <img src="Imgs/Inicio/logoproyecto.png" alt="logoproyecto" style="padding: 0px;">
+                    <img src="{% static 'Imgs/Inicio/logoproyecto.png' %}" alt="logoproyecto" style="padding: 0px;">
                     <h1>VISITE CASA PILOTO</h1>
                     <h1 style="text-decoration: line-through;">16 Exclusivas Casas</h1>
                     ULTIMAS 7 CASAS DISPONIBLES
@@ -129,7 +129,7 @@
                 &#62
             </div>
 
-            <img src="Imgs/Galeria/img1.jpg" alt="" id="imagen">
+            <img src="{% static 'Imgs/Galeria/img1.jpg' %}" alt="" id="imagen">
 
         </div>
 
@@ -150,13 +150,13 @@
             <div class="col-lg-12" style="padding: 10px; height: 100%; width: 100%;">
 
                 <div class="col-lg-4" style="padding: 10px;">
-                    <img src="Imgs/Pisos/Planta_subterraneo-2-800x528.jpg" alt="">
+                    <img src="{% static 'Imgs/Pisos/Planta_subterraneo-2-800x528.jpg' %}" alt="">
                 </div>
                 <div class="col-lg-4" style="padding: 10px;">
-                    <img src="Imgs/Pisos/Planta_1er_piso-1-800x528.jpg" alt="">
+                    <img src="{% static 'Imgs/Pisos/Planta_1er_piso-1-800x528.jpg' %}" alt="">
                 </div>
                 <div class="col-lg-4" style="padding: 10px;">
-                    <img src="Imgs/Pisos/Planta_2do_piso-1-800x528.jpg" alt="">
+                    <img src="{% static 'Imgs/Pisos/Planta_2do_piso-1-800x528.jpg' %}" alt="">
                 </div>
 
             </div>
@@ -215,8 +215,8 @@
 
 <!--Scripts-->
 
-<script src="JS/jquery-3.5.1.js"></script>
-<script src="JS/galeria.js"></script>
-<script src="JS/menu.js"></script>
+<script src="{% static 'JS/jquery-3.5.1.js'%}"></script>
+<script src="{% static 'JS/galeria.js'%}"></script>
+<script src="{% static 'JS/menu.js'%}"></script>
 
 </html>

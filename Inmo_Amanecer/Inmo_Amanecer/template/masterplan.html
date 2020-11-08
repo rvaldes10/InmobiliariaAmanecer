@@ -1,27 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/estilo.css' %}" type="text/css">
     <!-- Bootstrap Core CSS -->
-    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 
     <!-- MetisMenu CSS -->
-    <link href="Bootstrap/metisMenu.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/metisMenu.min.css' %}" type="text/css">
 
     <!-- Timeline CSS -->
-    <link href="Bootstrap/timeline.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/timeline.css' %}" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="Bootstrap/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/sb-admin-2.css' %}" type="text/css">
 
     <!-- Morris Charts CSS -->
-    <link href="Bootstrap/morris.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/morris.css' %}" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href="Bootstrap/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/font-awesome.min.css' %}" type="text/css">
     <title>Master Plan</title>
 </head>
 
@@ -35,7 +36,7 @@
 
         <div class="logo">
 
-            <img src="Imgs/Inicio/logoinmob.png" alt="logoinmob">
+            <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
 
         </div>
 
@@ -47,9 +48,9 @@
 
         <div class="OptNavBar">
 
-            <a href="index.html">INICIO</a>
-            <a href="registro.html">REGISTRO</a>
-            <a href="masterplan.html">MASTER PLAN</a>
+            <a href="/index">INICIO</a>
+            <a href="/registro">REGISTRO</a>
+            <a href="/masterplan">MASTER PLAN</a>
 
         </div>
 
@@ -85,7 +86,7 @@
 
         <!--Imagen Master Plan-->
 
-        <img src="Imgs/MasterPlan/final-Masterplan-casas-vendidas.jpg" alt="MasterPlan">
+        <img src="{% static 'Imgs/MasterPlan/final-Masterplan-casas-vendidas.jpg' %}" alt="MasterPlan">
 
     </div>
 
@@ -164,7 +165,7 @@
 
                 <div class="col-lg-4" style="padding-bottom: 25px;">
 
-                    <img src="Imgs/MasterPlan/mapa-ubicacion-final.jpg" alt="ubicación" style="padding: 0px;">
+                    <img src="{% static 'Imgs/MasterPlan/mapa-ubicacion-final.jpg' %}" alt="ubicación" style="padding: 0px;">
 
                 </div>
 
@@ -201,8 +202,8 @@
 
 <!--Script-->
 
-<script src="JS/jquery-3.5.1.js"></script>
-<script src="JS/galeria.js"></script>
-<script src="JS/menu.js"></script>
+<script src="{% static 'JS/jquery-3.5.1.js'%}"></script>
+<script src="{% static 'JS/galeria.js' %}"></script>
+<script src="{% static 'JS/menu.js' %}"></script>
 
 </html>

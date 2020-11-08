@@ -122,7 +122,7 @@ body{
 
     .CaracteristicasImagen{
 
-        background-image: url(Imgs/Inicio/Caracteristicas-2.png);
+        background: url(Inmo_Amanecer/Inmo_Amanecer/static/Imgs/Inicio/Caracteristicas-2.png);
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;

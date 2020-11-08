@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,23 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/estilo.css' %}" type="text/css">
     <!-- Bootstrap Core CSS -->
-    <link href="Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 
     <!-- MetisMenu CSS -->
-    <link href="Bootstrap/metisMenu.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/metisMenu.min.css' %}" type="text/css">
 
     <!-- Timeline CSS -->
-    <link href="Bootstrap/timeline.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/timeline.css' %}" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="Bootstrap/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/sb-admin-2.css' %}" type="text/css">
 
     <!-- Morris Charts CSS -->
-    <link href="Bootstrap/morris.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Css/morris.css' %}" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href="Bootstrap/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'Css/font-awesome.min.css' %}" type="text/css">
     <title>Registro</title>
 </head>
 
@@ -33,15 +35,15 @@
 
         <div class="logo">
 
-            <img src="Imgs/Inicio/logoinmob.png" alt="logoinmob">
+            <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
 
         </div>
 
         <div class="OptNavBar">
 
-            <a href="index.html">INICIO</a>
-            <a href="registro.html">REGISTRO</a>
-            <a href="masterplan.html">MASTER PLAN</a>
+            <a href="/index">INICIO</a>
+            <a href="/registro">REGISTRO</a>
+            <a href="/masterplan">MASTER PLAN</a>
 
         </div>
 
@@ -64,7 +66,7 @@
         <div class="row" style="margin: 0px;">
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
-                <img src="Imgs/Inicio/logoproyecto.png" alt=""
+                <img src="{% static 'Imgs/Inicio/logoproyecto.png' %}" alt=""
                     style="display: block; margin: auto; padding-bottom: 20px; padding-right: 0%;">
             </div>
         </div>
@@ -208,7 +210,7 @@
 <!--Scripts-->
 
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-<script src="Js/formulario.js"></script>
-<script src="js/jquery-3.5.1.js"></script>
+<script src="{% static 'Js/formulario.js' %}"></script>
+<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
 
 </html>
