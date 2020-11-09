@@ -1,6 +1,5 @@
 from django import forms
-from AppInmobiliariaAmanecer.models import Cliente
-
+from AppInmoAmanecer.models import Cliente
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
