@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Inmo_Amanecer.views import index, registro, masterplan
-from AppInmoAmanecer import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index),
+<<<<<<< HEAD
     path('registro/', views.clientes),
     path('masterplan/', masterplan),
     path('edit/<int:id>', views.modificar),
+=======
+    path('registro/', registro),
+    path('masterplan/', masterplan)
+>>>>>>> parent of bf645d5... Conexion y migracion de modelos con BD
 ]
