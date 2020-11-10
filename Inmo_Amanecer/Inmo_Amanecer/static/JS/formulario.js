@@ -1,11 +1,13 @@
+///^[0-9]+.{1,2}[0-9]+.{3}[0-9]+.{3}[0-9]$/
+
 const formulario = document.getElementById('formulario')
 
 const inputs = document.querySelectorAll('#formulario input')
 
 const expresiones = {
 	
-	nombre: /^[a-z A-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    rut: /^[0-9]+.{1,2}[0-9]+.{3}[0-9]+.{3}[0-9]$/, // Con punto y guión.
+    nombre: /^[a-z A-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    apellido: /^[a-z A-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^\d{1,14}$/, // 1 a 14 numeros.
 }
@@ -13,7 +15,7 @@ const expresiones = {
 const campos = {
 
     nombre:false,
-    rut:false,
+    apellido:false,
     mail:false,
     telefono:false
 
@@ -27,11 +29,11 @@ const validarFormulario = (e) => {
             validarCampo(expresiones.nombre,e.target, 'nombre')
 
             break;
-        case "rut":
-
-            validarCampo(expresiones.rut,e.target, 'rut')
         
-            break;
+        case "apellido":
+
+            validarCampo(expresiones.apellido,e.target, 'apellido')
+
         case "mail":
 
             validarCampo(expresiones.mail,e.target, 'mail')
@@ -81,7 +83,7 @@ formulario.addEventListener('submit', (e)  => {
 
     e.preventDefault();
 
-    if (campos.nombre && campos.rut && campos.mail && campos.telefono) {
+    if (campos.nombre && campos.apellido && campos.mail && campos.telefono) {
         
         formulario.reset();
 

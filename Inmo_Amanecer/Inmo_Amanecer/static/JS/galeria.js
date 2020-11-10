@@ -1,4 +1,4 @@
-var imagenes = ['Imgs/Galeria/img1.jpg','Imgs/Galeria/img2.jpg','Imgs/Galeria/img3.jpg','Imgs/Galeria/img4.jpg','Imgs/Galeria/img5.jpg','Imgs/Galeria/img6.jpg','Imgs/Galeria/img7.jpg','Imgs/Galeria/img8.jpg','Imgs/Galeria/img9.jpg','Imgs/Galeria/img10.jpg','Imgs/Galeria/img11.jpg','Imgs/Galeria/img12.jpg','Imgs/Galeria/img13.jpg','Imgs/Galeria/img14.jpg'],
+var imagenes = ['Inmo_Amanecer/static/Imgs/Galeria/img1.jpg','Inmo_Amanecer/staticImgs/Galeria/img2.jpg','Inmo_Amanecer/staticImgs/Galeria/img3.jpg','Inmo_Amanecer/staticImgs/Galeria/img4.jpg','Inmo_Amanecer/staticImgs/Galeria/img5.jpg','Inmo_Amanecer/staticImgs/Galeria/img6.jpg','Imgs/Galeria/img7.jpg','Imgs/Galeria/img8.jpg','Imgs/Galeria/img9.jpg','Imgs/Galeria/img10.jpg','Imgs/Galeria/img11.jpg','Imgs/Galeria/img12.jpg','Imgs/Galeria/img13.jpg','Imgs/Galeria/img14.jpg'],
 cont = 0;
 
 function carrousel(Galeria) {
