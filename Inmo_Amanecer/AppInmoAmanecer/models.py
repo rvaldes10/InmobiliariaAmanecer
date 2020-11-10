@@ -4,7 +4,7 @@ from django.db import models
 
 class Cliente(models.Model):
     
-    RUT = models.IntegerField(primary_key=True)
+    id_cliente = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     mail = models.EmailField()
     telefono = models.IntegerField()
