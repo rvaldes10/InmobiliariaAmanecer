@@ -267,6 +267,7 @@ body{
     .formulario__input{
 
         width: 100%;
+        color: black;
         background: transparent;
         border: 3px solid rgba(0,0,0,.7);
         border-radius: 3px;

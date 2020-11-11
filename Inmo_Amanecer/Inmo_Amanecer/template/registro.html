@@ -42,7 +42,7 @@
         <div class="OptNavBar">
 
             <a href="/index">INICIO</a>
-            <a href="/registro">REGISTRO</a>
+            <a href="/cotizacioncliente">REGISTRO</a>
             <a href="/masterplan">MASTER PLAN</a>
 
         </div>
@@ -103,67 +103,28 @@
 
                                 <!--Formulario-->
 
-                                <form action="/cotizacionclientes/" method="POST" class="formulario" id="formulario">
+                                <form action="" method="POST" class="formulario" id="formulario">
                                 {% csrf_token %}        
-                                    <div class="formulario__grupo" style="padding: 0px;" id="grupo__nombre">
-                                        <label for="nombre" class="formulario__label">Nombres</label>
-                                        <div class="formulario__grupo-input" style="padding: 0%;">
-
-                                            <input type="text" class="formulario__input" name="nombre" id="nombre"
-                                                placeholder="Ingrese su Nombre Completo">{{form.NombreCompleto}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El nombre no puede contener numeros ni
-                                                signos.</p>
-
-                                        </div>
+                                    <div style="padding: 0px;" id="grupo__nombre">
+                                        
+                                        <label for="nombre" class="formulario__label">Nombre Completo</label>
+                                        {{form.nombreCompleto}}
 
                                     </div>
 
-                                    <div class="formulario__grupo" style="padding: 0px;" id="grupo__nombre">
-                                        <label for="apellido" class="formulario__label">Apellidos</label>
-                                        <div class="formulario__grupo-input" style="padding: 0%;">
+                                    <div id="grupo__mail">
 
-<<<<<<< HEAD
-                                            <!--<input type="text" class="formulario__input" name="nombre" id="nombre"
-                                                placeholder="Ingrese su Nombre Completo">-->{{form.apellido}}
-=======
-                                            <input type="text" class="formulario__input" name="rut" id="rut"
-                                                placeholder="Ej: 12.345.678-9">{{form.RUT}}
->>>>>>> parent of bf645d5... Conexion y migracion de modelos con BD
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El Apellido no puede contener numeros ni
-                                                signos.</p>
-            
-                                        </div>
+                                        <label for="mail" class="formulario__label">Correo</label>
 
+                                        {{form.mail}}
+                                            
                                     </div>
 
-                                    <div class="formulario__grupo" id="grupo__mail">
-                                        <label for="mail" class="formulario__label">Mail</label>
-                                        <div class="formulario__grupo-input">
-
-                                            <input type="email" class="formulario__input" name="mail" id="mail"
-                                                placeholder="ejemplo@dominio.com">{{form.mail}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El mail solo puede contener letras,
-                                                numeros, puntos, guiones, y guion bajo.</p>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="formulario__grupo" id="grupo__telefono">
-                                        <label for="telefono" class="formulario__label">Teléfono</label>
-                                        <div class="formulario__grupo-input">
-
-                                            <input type="text" class="formulario__input" name="telefono" id="telefono"
-                                                placeholder="Teléfono">{{form.telefono}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El teléfono solo puede contener numeros y
-                                                el maximo son 14 digitos.</p>
-
-                                        </div>
-
+                                    <div id="grupo__telefono">
+                                        
+                                        <label for="telefono" class="formulario__label">Telefono</label>
+                                        {{form.telefono}}
+                                            
                                     </div>
 
                                     <div class="formulario__mensaje" id="formulario__mensaje">
@@ -175,9 +136,9 @@
 
                                         <button type="submit" class="formulario__btn">Registrar</button>
                                         <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Registro
-                                            exitoso!</p>
-                                        
-                                        <a href="edit/{{cli.id_cliente}}">Modificar</a>
+                                        exitoso!</p>
+
+                                        {{mensaje}}
 
                                     </div>
 
@@ -189,32 +150,6 @@
 
                 </div>
             </div>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <td>Nombre</td>
-                        <td>RUT</td>
-                        <td>mail</td>
-                        <td>telefono</td>
-                    
-                    </tr>
-                    {% for cli in clientes %}
-                    <tr>
-
-                        <td>{{cli.nombre}}</td>
-                        <td>{{cli.id_cliente}}</td>
-                        <td>{{cli.mail}}</td>
-                        <td>{{cli.telefono}}</td>
-
-                    </tr>
-                    {% endfor %}
-                </thead>
-
-            </table>
 
             <!--Termino Contenedor Principal-->
 
@@ -243,7 +178,7 @@
 <!--Scripts-->
 
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-<script src="{% static 'Js/formulario.js' %}"></script>
+<!--<script src="{% static 'Js/formulario.js' %}"></script>-->
 <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
 
 </html>
