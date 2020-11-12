@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Inmo_Amanecer.views import index, masterplan
-from AppInmobiliariaAmanecer.views import RegistroCliente
+from AppInmobiliariaAmanecer.views import RegistroCliente, listar_clientes, modificar_cliente, eliminar_cliente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index),
     path('masterplan/', masterplan),
-    path('cotizacioncliente/',RegistroCliente, name="Registro_Cliente" )
+    path('cotizacioncliente/', RegistroCliente, name="Registro_Cliente" ),
+    path('listar_clientes/', listar_clientes, name="Listar_Cliente"),
+    path('listar_clientes/modificar_cliente/<int:id>/', modificar_cliente, name="Modificar_Cliente"),
+    path('listar_clientes/eliminar_cliente/<int:id>/', eliminar_cliente, name="Eliminar_Cliente")
 ]

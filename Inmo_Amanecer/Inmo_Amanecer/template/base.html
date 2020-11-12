@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Css/estilo.css' %}" type="text/css">
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- MetisMenu CSS -->
+    <link rel="stylesheet" href="{% static 'Css/metisMenu.min.css' %}" type="text/css">
+
+    <!-- Timeline CSS -->
+    <link rel="stylesheet" href="{% static 'Css/timeline.css' %}" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'Css/sb-admin-2.css' %}" type="text/css">
+
+    <!-- Morris Charts CSS -->
+    <link rel="stylesheet" href="{% static 'Css/morris.css' %}" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{% static 'Css/font-awesome.min.css' %}" type="text/css">
+    <title>Inmobiliaria</title>
+</head>
+
+<body>
+
+    <!--Seccion Menu Superior-->
+
+    <div class="navbarLogo">
+
+        <!--Logo-->
+
+        <div class="logo">
+
+            <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
+
+        </div>
+
+    </div>
+
+    <div class="navbarMaster">
+
+        <!--Opciones Menú Superior-->
+
+        <div class="OptNavBar">
+
+            <a href="/index">INICIO</a>
+            <a href="/cotizacioncliente">REGISTRO</a>
+            <a href="/masterplan">MASTER PLAN</a>
+
+        </div>
+
+        <!--Horario Piloto-->
+
+        <div class="InfoPiloto">
+
+            VISITA A PILOTOS: LUNES A VIERNES DE 11:00 A 18:00 HRS. +56913365409 inmobiliaria@amanecersa.cl
+
+        </div>
+
+    </div>
+
+    <!--Termino Menú Superior-->
+
+    {% block contenido %}
+
+
+
+    {% endblock %}
+
+    <!--Sección de Footer-->
+
+    <div class="col-lg-12 footer InfoFooter">
+
+        <div class="col-lg-2"></div>
+
+        <!--Contenedor Texto Footer-->
+
+        <div class="col-lg-8" style="text-align: center; color: ivory;">
+
+            <p>Dirección: Paseo Del Cid 4181, Lo Barnechea. Teléfono: +56 9 6159 2501 Email: nogalesdelcid@amanecersa.cl
+            </p>
+            <p>Horario de atención es de Lunes a Viernes de 11:00 a 18:00 hrs.</p>
+
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+</body>
+
+<!--Scripts-->
+
+<script src="{% static 'JS/jquery-3.5.1.js'%}"></script>
+<script src="{% static 'JS/galeria.js'%}"></script>
+<script src="{% static 'JS/menu.js'%}"></script>
+
+</html>

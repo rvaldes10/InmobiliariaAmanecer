@@ -1,216 +1,115 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css" type="text/css">
-    <link rel="stylesheet" href="{% static 'Css/estilo.css' %}" type="text/css">
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+{% block contenido %}
 
-    <!-- MetisMenu CSS -->
-    <link rel="stylesheet" href="{% static 'Css/metisMenu.min.css' %}" type="text/css">
-
-    <!-- Timeline CSS -->
-    <link rel="stylesheet" href="{% static 'Css/timeline.css' %}" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'Css/sb-admin-2.css' %}" type="text/css">
-
-    <!-- Morris Charts CSS -->
-    <link rel="stylesheet" href="{% static 'Css/morris.css' %}" type="text/css">
-
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{% static 'Css/font-awesome.min.css' %}" type="text/css">
-    <title>Registro</title>
-</head>
-
-<body id="bodyRegistro">
-
-    <!--Menu superior con Logo-->
-
-    <div class="navbarMaster" style="margin: 0%;">
-
-        <div class="logo">
-
-            <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
-
-        </div>
-
-        <div class="OptNavBar">
-
-            <a href="/index">INICIO</a>
-            <a href="/registro">REGISTRO</a>
-            <a href="/masterplan">MASTER PLAN</a>
-
-        </div>
-
-        <div class="InfoPiloto">
-
-            VISITA A PILOTOS: LUNES A VIERNES DE 11:00 A 18:00 HRS. +56913365409 inmobiliaria@amanecersa.cl
-
-        </div>
-
-    </div>
-
-    <!--Contenedor del Registro-->
-
-    <div id="page-wrapper" style="margin: 0%; padding: 0px; background-image: url(Imgs/Inicio/frentecasa.webp); background-position: center bottom;
+<div id="page-wrapper" style="margin: 0%; padding: 0px; background-image: url(Imgs/Inicio/frentecasa.webp); background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover; background-color: rgba(0,0,0,0.41);">
 
-        <!--Logo Nogales del Cid-->
+    <!--Logo Nogales del Cid-->
 
-        <div class="row" style="margin: 0px;">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <img src="{% static 'Imgs/Inicio/logoproyecto.png' %}" alt=""
-                    style="display: block; margin: auto; padding-bottom: 20px; padding-right: 0%;">
-            </div>
+    <div class="row" style="margin: 0px;">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <img src="{% static 'Imgs/Inicio/logoproyecto.png' %}" alt=""
+                style="display: block; margin: auto; padding-bottom: 20px; padding-right: 0%;">
         </div>
+    </div>
 
-        <!--Contenedor Principal-->
+    <!--Contenedor Principal-->
 
-        <div class="row col-lg-12" style="padding: 0px; margin: 0px; margin-bottom: 0px; margin-top: 0px;">
-            <div class="col-lg-4"></div>
+    <div class="row col-lg-12" style="padding: 0px; margin: 0px; margin-bottom: 0px; margin-top: 0px;">
+        <div class="col-lg-4"></div>
 
-            <!--Contenedor Panel de Registro-->
+        <!--Contenedor Panel de Registro-->
 
-            <div class="col-lg-4" style="color: ivory; padding: 0px;">
+        <div class="col-lg-4" style="color: ivory; padding: 0px;">
 
 
 
-                <div class="panel panel-default" style=" margin: 10px; background-position: center bottom;
+            <div class="panel panel-default" style=" margin: 10px; background-position: center bottom;
                 background-repeat: no-repeat;
                 background-size: cover; background-color: rgba(0,0,0,0.41);">
 
-                    <!--Header Registro-->
+                <!--Header Registro-->
 
-                    <div class="panel-heading"
-                        style=" background-position: center bottom;
+                <div class="panel-heading"
+                    style=" background-position: center bottom;
                     background-repeat: no-repeat;
                     background-size: cover; background-color: rgba(0,0,0,0.41); color: ivory; text-align: center; font-size: large;">
-                        EDITAR CLIENTE
-                    </div>
+                    REGISTRO
+                </div>
 
-                    <!--Body Registro-->
+                <!--Body Registro-->
 
-                    <div class="panel-body" style="background-color: rgba(0,0,0,0.41);">
-                        <div class="row">
-                            <div class="col-lg-12">
+                <div class="panel-body" style="background-color: rgba(0,0,0,0.41);">
+                    <div class="row">
+                        <div class="col-lg-12">
 
-                                <!--Formulario-->
+                            <!--Formulario-->
 
-                                <form action="/cotizacionclientes/" method="POST" class="formulario" id="formulario">
-                                {% csrf_token %}        
-                                    <div class="formulario__grupo" style="padding: 0px;" id="grupo__nombre">
-                                        <label for="nombre" class="formulario__label">Nombre</label>
-                                        <div class="formulario__grupo-input" style="padding: 0%;">
+                            <form action="" method="POST" class="formulario" id="formulario" style="text-align: center;">
+                                {% csrf_token %}
+                                <div style="padding: 0px;" id="grupo__nombre">
 
-                                            <!--<input type="text" class="formulario__input" name="nombre" id="nombre"
-                                                placeholder="Ingrese su Nombre Completo">-->{{form.nombre}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El nombre no puede contener numeros ni
-                                                signos.</p>
-            
-                                        </div>
+                                    <label for="nombre" class="formulario__label">Nombre Completo</label>
+                                    <div style="color: black;">
+                                    
+                                        {{form.nombreCompleto}}
 
                                     </div>
 
-                                    <div class="formulario__grupo" id="grupo__rut">
-                                        <label for="rut" class="formulario__label">RUT</label>
-                                        <div class="formulario__grupo-input">
+                                </div>
 
-                                            <!--<input type="text" class="formulario__input" name="rut" id="rut"
-                                                placeholder="Ej: 12.345.678-9">-->{{form.RUT}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El Rut no puede contener letras ni
-                                                espacios.</p>
+                                <div id="grupo__mail">
 
-                                        </div>
+                                    <label for="mail" class="formulario__label" style="padding-top: 10px;">Correo</label>
+                                    <div style="color: black;">
+                                    
+                                        {{form.mail}}
 
                                     </div>
 
-                                    <div class="formulario__grupo" id="grupo__mail">
-                                        <label for="mail" class="formulario__label">Mail</label>
-                                        <div class="formulario__grupo-input">
+                                </div>
 
-                                            <!--<input type="email" class="formulario__input" name="mail" id="mail"
-                                                placeholder="ejemplo@dominio.com">-->{{form.mail}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El mail solo puede contener letras,
-                                                numeros, puntos, guiones, y guion bajo.</p>
+                                <div id="grupo__telefono">
 
-                                        </div>
-
+                                    <label for="telefono" class="formulario__label" style="padding-top: 10px;">Telefono</label>
+                                    <div style="color: black;">
+                                    
+                                        {{form.telefono}}
+                                        
                                     </div>
 
-                                    <div class="formulario__grupo" id="grupo__telefono">
-                                        <label for="telefono" class="formulario__label">Teléfono</label>
-                                        <div class="formulario__grupo-input">
+                                </div>
+                                <br>
 
-                                            <!--<input type="text" class="formulario__input" name="telefono" id="telefono"
-                                                placeholder="Teléfono">-->{{form.telefono}}
-                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <p class="formulario__input-error">El teléfono solo puede contener numeros y
-                                                el maximo son 14 digitos.</p>
+                                <div style="text-align: center;">
 
-                                        </div>
+                                    <button type="submit" class="btn btn-success">Modificar</button>
+                                    &nbsp;
+                                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                                    &nbsp;
+                                    <!--<a href="listar_clientes/" class="btn btn-info">Volver</a>-->
+                                    
+                                    {{mensaje}}
 
-                                    </div>
+                                </div>
 
-                                    <div class="formulario__mensaje" id="formulario__mensaje">
-                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Ingreso de datos
-                                            incorrecto.</p>
-                                    </div>
-
-                                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-
-                                        <button type="submit" class="formulario__btn">Modificar</button>
-                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Modificación
-                                            exitosa!</p>
-
-                                    </div>
-
-                                </form>
-                            </div>
+                            </form>
                         </div>
-
                     </div>
 
                 </div>
+
             </div>
-
-            <!--Termino Contenedor Principal-->
-
-            <div class="col-lg-4"></div>
         </div>
+
+        <!--Termino Contenedor Principal-->
+
+        <div class="col-lg-4"></div>
     </div>
+</div>
 
-    <!--Seccion de Footer-->
-
-    <div class="col-lg-12" style="background-color: rgb(15, 15, 15); padding-top: 25px;
-            padding-right: 30px; padding-left: 30px; padding-bottom: 30px;">
-
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8" style="text-align: center; color: ivory;">
-
-            <p>Dirección: Paseo Del Cid 4181, Lo Barnechea. Teléfono: +56 9 6159 2501 Email: nogalesdelcid@amanecersa.cl
-            </p>
-            <p>Horario de atención es de Lunes a Viernes de 11:00 a 18:00 hrs.</p>
-
-        </div>
-        <div class="col-lg-2"></div>
-    </div>
-
-</body>
-
-<!--Scripts-->
-
-<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-<script src="{% static 'Js/formulario.js' %}"></script>
-<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
-
-</html>
+{% endblock %}
