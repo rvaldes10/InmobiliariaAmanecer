@@ -11,7 +11,7 @@
 
     <div class="row" style="margin: 0px;">
         <div class="col-lg-4"></div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" style="padding-top: 20px;">
             <img src="{% static 'Imgs/Inicio/logoproyecto.png' %}" alt=""
                 style="display: block; margin: auto; padding-bottom: 20px; padding-right: 0%;">
         </div>
@@ -69,8 +69,8 @@
                                     <td style="text-align: center;">{{cli.mail}}</td>
                                     <td style="text-align: center;">{{cli.telefono}}</td>
                                     <td style="text-align: center;">
-                                        <a href="modificar_cliente/{{cli.id_cliente}}" class="btn btn-info btn-sm">Modificar</a>
-                                        <a href="eliminar_cliente/{{cli.id_cliente}}" class="btn btn-danger btn-sm">Eliminar</a>
+                                        <a href="{% url 'Modificar_Cliente' cli.id_cliente %}" class="btn btn-info btn-sm">Modificar</a>
+                                        <a href="{% url 'Eliminar_Cliente' cli.id_cliente %}" class="btn btn-danger btn-sm">Eliminar</a>
                                     </td>
 
                                 </tr>

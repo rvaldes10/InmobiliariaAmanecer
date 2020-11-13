@@ -48,9 +48,19 @@
 
         <div class="OptNavBar">
 
-            <a href="/index">INICIO</a>
-            <a href="/cotizacioncliente">REGISTRO</a>
-            <a href="/masterplan">MASTER PLAN</a>
+            <a href="{% url 'Index' %}">INICIO</a>
+            <a href="{% url 'Registro_Cliente' %}">COTIZACION</a>
+            <a href="{% url 'Master_Plan'%}">MASTER PLAN</a>
+            {% if user.is_authenticated %}
+
+            <a href="{% url 'logout' %}">CERRAR SESIÓN</a>
+            <a href="{% url 'Listar_Cliente' %}">CLIENTES</a>
+
+            {% else %}
+
+            <a href="{% url 'login' %}">INICIAR SESIÓN</a>
+
+            {% endif %}
 
         </div>
 
