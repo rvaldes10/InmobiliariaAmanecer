@@ -13,7 +13,7 @@
 
 </head>
 
-<body style="background-color: rgb(20, 20, 20);">
+<body style="background-color: rgb(20, 20, 20); background-image: url('/static/Imgs/Inicio/frentecasa.webp'); background-repeat: no-repeat; background-size: cover;">
     {% load crispy_forms_tags %}
     <div class="navbarLogo">
 
@@ -46,7 +46,7 @@
                             {{form | crispy}}
 
                             <input type="submit" value="Recuperar" class="btn btn-success float-left">
-                            <a href="{% url 'Index' %}" class="btn btn-info float-right">Volver al Inicio</a>
+                            <a href="{% url 'login' %}" class="btn btn-info float-right">Volver al Inicio</a>
 
                         </form>
                         

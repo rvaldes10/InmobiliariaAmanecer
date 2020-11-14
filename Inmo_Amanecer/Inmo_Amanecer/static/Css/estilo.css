@@ -22,7 +22,7 @@ body{
 
     .navbar-fixed{
 
-        background: rgb(15, 15, 15);
+        background: rgba(15, 15, 15);
         position: fixed;
         z-index: 10000;
         top: 0;
@@ -114,15 +114,17 @@ body{
 
     .TextoHeader{
 
+        background-image: url("{% static 'Imgs/Inicio/frentecasa.webp'%}");
         font-family: Arial, Helvetica, sans-serif;
         color: ivory;
         text-align: center;
+        background-repeat: no-repeat;
 
     }
 
     .CaracteristicasImagen{
 
-        background: url(Inmo_Amanecer/Inmo_Amanecer/static/Imgs/Inicio/Caracteristicas-2.png);
+        background-image: url('{{ STATIC_URL }} Imgs/Inicio/Caracteristicas-2.png');
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -156,21 +158,10 @@ body{
 
     }
 
-    .Galeria{
+    #carouselAmanecer{
 
-        width: 100%;
-        position: relative;
-        height: 750px;
-        padding-bottom: 45px;
-
-    }
-
-    .Galeria img {
-
-        width: 98%;
-        height: 100%;
-        display: block;
-        margin: auto;
+        height: 200px;
+        width: 200px;
 
     }
 

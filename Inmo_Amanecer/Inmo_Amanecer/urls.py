@@ -15,16 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Inmo_Amanecer.views import index, masterplan
+from Inmo_Amanecer.views import masterplan
 from AppInmobiliariaAmanecer.views import CotizacionCliente, listar_clientes, \
-    modificar_cliente, eliminar_cliente
+    modificar_cliente, eliminar_cliente, carousel_imagenes
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index, name="Index"),
+    path('index/', carousel_imagenes, name="Index"),
     path('masterplan/', masterplan, name="Master_Plan"),
     path('cotizacion_cliente/', CotizacionCliente, name="Cotizacion_Cliente" ),
     path('listar_clientes/', listar_clientes, name="Listar_Cliente"),

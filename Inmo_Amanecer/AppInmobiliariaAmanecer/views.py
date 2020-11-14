@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from AppInmobiliariaAmanecer.forms import ClienteForm
-from AppInmobiliariaAmanecer.models import Cliente
+from AppInmobiliariaAmanecer.models import Cliente, Galeria
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -62,3 +62,15 @@ def eliminar_cliente(request, id):
     cliente = get_object_or_404(Cliente, id_cliente=id)
     cliente.delete()
     return redirect(to="Listar_Cliente")
+
+def carousel_imagenes(request):
+
+    img = Galeria.objects.all()
+
+    data = {
+
+        'img': img
+
+    }
+
+    return render(request, 'index.html', data)

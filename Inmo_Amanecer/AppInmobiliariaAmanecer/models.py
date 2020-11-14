@@ -11,6 +11,6 @@ class Cliente(models.Model):
 
 class Galeria(models.Model):
     id_imagen = models.AutoField(primary_key=True)
-    imagen = models.ImageField(null = True)
+    imagen = models.ImageField(upload_to="Galeria", null = True)
     class Meta:
         db_table = "galeria"
