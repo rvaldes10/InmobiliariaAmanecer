@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'Css/estilo.css' %}" type="text/css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'Css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 
@@ -36,6 +39,20 @@
 
         <div class="logo">
 
+            <div class="OptNavBar" style="text-align: right;">
+
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'logout' %}">CERRAR SESIÓN</a>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}">INICIAR SESIÓN</a>
+
+                {% endif %}
+    
+            </div>
+
             <img src="{% static 'Imgs/Inicio/logoinmob.png' %}" alt="logoinmob">
 
         </div>
@@ -49,16 +66,11 @@
         <div class="OptNavBar">
 
             <a href="{% url 'Index' %}">INICIO</a>
-            <a href="{% url 'Registro_Cliente' %}">COTIZACION</a>
+            <a href="{% url 'Cotizacion_Cliente' %}">COTIZACION</a>
             <a href="{% url 'Master_Plan'%}">MASTER PLAN</a>
             {% if user.is_authenticated %}
 
-            <a href="{% url 'logout' %}">CERRAR SESIÓN</a>
-            <a href="{% url 'Listar_Cliente' %}">CLIENTES</a>
-
-            {% else %}
-
-            <a href="{% url 'login' %}">INICIAR SESIÓN</a>
+                <a href="{% url 'Listar_Cliente' %}">CLIENTES</a>
 
             {% endif %}
 

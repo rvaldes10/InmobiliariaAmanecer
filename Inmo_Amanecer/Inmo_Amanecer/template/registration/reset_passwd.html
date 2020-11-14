@@ -9,7 +9,7 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ingreso al Sistema</title>
+    <title>Recuperar Contraseña</title>
 
 </head>
 
@@ -36,7 +36,8 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h2>Ingrese sus Credenciales</h2>
+                        <h2>Recuperar Contraseña</h2>
+                        <p>Ingrese su correo para recuperar su contraseña</p>
                         <hr>
                         <form action="" method="POST">
 
@@ -44,18 +45,13 @@
 
                             {{form | crispy}}
 
-                            <input type="submit" value="Ingresar" class="btn btn-success float-left">
+                            <input type="submit" value="Recuperar" class="btn btn-success float-left">
                             <a href="{% url 'Index' %}" class="btn btn-info float-right">Volver al Inicio</a>
 
                         </form>
                         
                     </div>
 
-                    <div style="text-align: left; padding-left: 16px; padding-bottom: 16px;">
-
-                        <a href="{% url 'Recuperar_Contraseña' %}">¿Olvidaste tu contraseña?</a>
-
-                    </div>
                 </div>
 
             </div>

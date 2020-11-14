@@ -8,3 +8,9 @@ class Cliente(models.Model):
     telefono = models.IntegerField()
     class Meta:
         db_table = "cliente"
+
+class Galeria(models.Model):
+    id_imagen = models.AutoField(primary_key=True)
+    imagen = models.ImageField(null = True)
+    class Meta:
+        db_table = "galeria"
