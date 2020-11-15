@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block contenido %}
 
 <div id="page-wrapper" style="margin: 0%; padding: 0px; background-image: url(Imgs/Inicio/frentecasa.webp); background-position: center bottom;
@@ -50,39 +50,14 @@
                             <!--Formulario-->
 
                             <form action="" method="POST" class="formulario" id="formulario" style="text-align: center;">
-                                {% csrf_token %}
-                                <div style="padding: 0px;" id="grupo__nombre">
 
-                                    <label for="nombre" class="formulario__label">Nombre Completo</label>
-                                    <div style="color: black;">
-                                    
-                                        {{form.nombreCompleto}}
+                                <div id="containerForm" style="color: ivory;">
 
-                                    </div>
+                                    {% csrf_token %}
+                                    {{form | crispy}}
 
                                 </div>
 
-                                <div id="grupo__mail">
-
-                                    <label for="mail" class="formulario__label" style="padding-top: 10px;">Correo</label>
-                                    <div style="color: black;">
-                                    
-                                        {{form.mail}}
-
-                                    </div>
-
-                                </div>
-
-                                <div id="grupo__telefono">
-
-                                    <label for="telefono" class="formulario__label" style="padding-top: 10px;">Telefono</label>
-                                    <div style="color: black;">
-                                    
-                                        {{form.telefono}}
-                                        
-                                    </div>
-
-                                </div>
                                 <br>
 
                                 <div style="text-align: center;">

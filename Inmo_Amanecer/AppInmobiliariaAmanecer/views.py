@@ -63,14 +63,3 @@ def eliminar_cliente(request, id):
     cliente.delete()
     return redirect(to="Listar_Cliente")
 
-def carousel_imagenes(request):
-
-    img = Galeria.objects.all()
-
-    data = {
-
-        'img': img
-
-    }
-
-    return render(request, 'index.html', data)

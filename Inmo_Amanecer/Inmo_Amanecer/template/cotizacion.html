@@ -52,51 +52,26 @@
                             <!--Formulario-->
 
                             <form action="" method="POST" class="formulario" id="formulario">
-                                {% csrf_token %}
-                                <div style="padding: 0px; color: ivory;" id="grupo__nombre">
+                                <div id="containerForm" style="color: ivory;">
 
-                                    <label for="nombre" class="formulario__label">Nombre Completo</label>
-                                    <div style="color: black;">
-
-                                        {{form.nombreCompleto}}
-
-                                    </div>
-
-                                </div>
-
-                                <div id="grupo__mail">
-
-                                    <label for="mail" class="formulario__label" style="color: ivory; padding-top: 10px;">Correo</label>
-
-                                    <div style="color: black;">
-
-                                        {{form.mail}}
-
-                                    </div>
-
-                                </div>
-
-                                <div id="grupo__telefono">
-
-                                    <label for="telefono" class="formulario__label" style="color: ivory; padding-top: 10px;">Telefono</label>
-                                    <div style="color: black;">
-
-                                        {{form.telefono}}
-
-                                    </div>
+                                    {% csrf_token %}
+                                    {{form | crispy}}
 
                                 </div>
 
                                 <div class="formulario__grupo formulario__grupo-btn-enviar" style="padding: 15px;">
 
-                                    <button type="submit" class="formulario__btn" >Cotizar</button>
-                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Registro
-                                        exitoso!</p>
-                                    <div style="color: ivory;">
+                                    <div style="color:rgb(13, 199, 13);">
 
                                         {{mensaje}}
 
                                     </div>
+
+                                    <br>
+
+                                    <button type="submit" class="formulario__btn" >Cotizar</button>
+                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Registro
+                                        exitoso!</p>
 
                                 </div>
 
