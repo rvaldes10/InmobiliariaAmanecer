@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="admin"),
+    path('', home, name="Index"),
     path('index/', home, name="Index"),
     path('masterplan/', masterplan, name="Master_Plan"),
     path('cotizacion_cliente/', CotizacionCliente, name="Cotizacion_Cliente" ),
